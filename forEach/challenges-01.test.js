@@ -191,6 +191,13 @@ const removeWithAnon = (input) => {
 
 const createList = (availableItems) => {
   // Solution code here...
+  let myList = [];
+  availableItems.forEach( item => {
+    if(item.available == true) {
+      myList.push(item.name);
+    }
+  })
+  return myList;
 }
 
 // ------------------------------------------------------------------------------------------------
@@ -209,6 +216,19 @@ const createList = (availableItems) => {
 
 const fizzbuzz = (arr) => {
   // Solution code here...
+  let finalArray = [];
+  arr.forEach(number => {
+    if (number % 3 === 0 && number % 5 === 0) {
+      finalArray.push('Fizz Buzz');
+    } else if (number % 3 === 0) {
+      finalArray.push('Fizz');
+    } else if (number % 5 === 0) {
+      finalArray.push('Buzz');
+    } else {
+      finalArray.push(number);
+    }
+  })
+  return finalArray;
 }
 
 // ------------------------------------------------------------------------------------------------
