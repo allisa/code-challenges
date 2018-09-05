@@ -144,7 +144,7 @@ const removeElements = (input, callback) => {
 
 const removeWithForEach = (input, callback) => {
   // Solution code here...
-  input.forEach(function(i) {
+  input.forEach((i) => {
     callback(i, input);
     })
     return input;
@@ -163,6 +163,12 @@ const removeWithForEach = (input, callback) => {
 
 const removeWithAnon = (input) => {
   // Solution code here...
+  input.forEach(function(num, index, input){
+    if (num % 3 === 2) {
+      input.pop();
+    }
+  });
+  return input;
 }
 
 // ------------------------------------------------------------------------------------------------
