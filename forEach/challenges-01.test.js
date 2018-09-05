@@ -50,7 +50,11 @@ const addBonusPoints = (arr) => {
 
 const addCurve = (arr) => {
   // Solution code here...
-
+  let curvedScores = [];
+  for (let i in arr) {
+    curvedScores.push((arr[i] * .05) + arr[i]);
+  }
+  return (curvedScores);
 }
 
 // ------------------------------------------------------------------------------------------------
@@ -64,10 +68,12 @@ const addCurve = (arr) => {
 
 const greeting = (word) => {
   // Solution code here...
+  return word.toUpperCase();
 }
 
 const speaker = (message, callback) => {
   // Solution code here...
+  return callback(message);
 }
 
 // ------------------------------------------------------------------------------------------------
@@ -89,6 +95,7 @@ const speaker = (message, callback) => {
 
 const addValues = (arr, value) => {
   // Solution code here...
+  
 }
 
 const addNumbers = (num, arr, times, callback) => {
@@ -207,7 +214,11 @@ describe('Testing challenge 2', () => {
 
 describe('Testing challenge 3', () => {
   test('It should increase each raw score by 5%', () => {
-    expect(addCurve([55, 79, 100, 85, 92])).toStrictEqual([ 57.75, 82.95, 105, 89.25, 96.60000000000001 ]);
+    const resultScores = addCurve([55, 79, 100, 85, 92]);
+    const expectedScores = [ 57.75, 82.95, 105, 89.25, 96.60000000000001 ];
+    for (let i in expectedScores) {
+      expect(resultScores[i]).toBeCloseTo(expectedScores[i]);
+    }
   });
 });
 
