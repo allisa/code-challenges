@@ -28,7 +28,15 @@ const cookieStores = [firstPike, seaTac, seattleCenter, capHill, alkiBeach];
 
 const grandTotal = (hours, stores) => {
   // Solution code here...
-
+  const allCookiesPerHourTotal = [];
+  for (let i = 0; i < hoursOpen.length; i++) {
+    let sum = 0;
+    for (let j = 0; j < cookieStores.length; j++) {
+      sum += cookieStores[j][i];
+    }
+    allCookiesPerHourTotal.push(sum);
+  }
+  return allCookiesPerHourTotal;
 };
 
 
@@ -46,6 +54,14 @@ const grandTotal = (hours, stores) => {
 
 const salesData = (data) => {
   // Solution code here...
+  const answer = [];
+  data.forEach((hourlyTotal, i) => {
+    const salesObj = {};
+    salesObj.sales = `${hourlyTotal} cookies`;
+    salesObj.time =  `${hoursOpen[i]}`;
+    answer.push(salesObj);
+  })
+  return answer;
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -62,6 +78,17 @@ const salesData = (data) => {
 
 const giveValentines = (list) => {
   // Solution code here...
+  const messages = [];
+  for (let k = 0; k < list.length; k++) {
+    for (let l = 0; l < list.length; l++) {
+      if (k !== l) {
+        messages.push(`${list[k]} gives a Valentine to ${list[l]}.`);
+      } else {
+        continue; //knowledge learned from Danul :-)
+      }
+    }
+  }
+  return messages;
 };
 
 // ------------------------------------------------------------------------------------------------
