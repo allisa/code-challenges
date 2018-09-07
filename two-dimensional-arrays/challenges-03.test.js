@@ -79,6 +79,13 @@ const battleship = (board, row, col) => {
 
 const calculateProduct = (numbers) => {
   // Solution code here...
+  let result = 1;
+  for (let i = 0; i < numbers.length; i++) {
+    for (let j = 0; j < numbers[i].length; j++) {
+      result *= numbers[i][j];
+    }
+  }
+  return result;
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -100,6 +107,17 @@ const weeklyTemperatures = [
 
 const averageDailyTemperature = (weather) => {
   // Solution code here...
+  let total = 0;
+  let numWeeks;
+  for (let i = 0; i < weeklyTemperatures.length; i++) {
+    numWeeks = weeklyTemperatures.length;
+    for (let j = 0; j < weeklyTemperatures[i].length; j++) {
+      total += weeklyTemperatures[i][j];
+    }
+  }
+  let avgTemp = total / (7 * numWeeks);
+  return avgTemp;
+  //return numWeeks;
 };
 
 // ------------------------------------------------------------------------------------------------
