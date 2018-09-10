@@ -33,12 +33,7 @@ const howMuchPencil = (name) => {
 // ------------------------------------------------------------------------------------------------
 
 const wordsToCharList = (input) => {
-  const anwser = [];
-  for (let j = 0; j <= input.length; j ++) {
-    let nameSplit = input.split(/[a-z]/i);
-    //anwser.push(nameSplit);
-  }
-  return nameSplit;
+  return input.split('');
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -50,7 +45,12 @@ const wordsToCharList = (input) => {
 
 const totalSumCSV = (input) => {
   let total = 0;
-  // Solution code here...
+  for (let k = 0; k < input.length; k++) {
+    let supInput = (input.split(','));
+    for (let l = 0; l < supInput.length; l++){
+      total += parseInt(supInput[l]);
+    }
+  }
   return total;
 };
 
