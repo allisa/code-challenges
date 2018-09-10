@@ -45,12 +45,10 @@ const wordsToCharList = (input) => {
 
 const totalSumCSV = (input) => {
   let total = 0;
-  for (let k = 0; k < input.length; k++) {
-    let supInput = (input.split(','));
-    for (let l = 0; l < supInput.length; l++){
-      total += parseInt(supInput[l]);
-    }
-  }
+  let supInput = input.split(',');
+  supInput.forEach( (ind) => {
+    total += parseInt(ind);
+  });
   return total;
 };
 
@@ -146,7 +144,14 @@ const splitFoods = (recipe) => {
 // ------------------------------------------------------------------------------------------------
 
 const removeEvenValues = (input) => {
-  // Solution code here...
+  let answer7 = [];
+  for (let m = 0; m <= input.length; m++) {
+    if (input[m] %2 === 0) {
+      input.splice(m);
+      m--;
+    }
+  }
+  return input;
 };
 
 // ------------------------------------------------------------------------------------------------
