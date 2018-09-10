@@ -16,7 +16,10 @@
 
 const howMuchPencil = (name) => {
   let result = [];
-  // Solution code here...
+  for (let i = 0; i <= name.length; i++) {
+    let letterRemoved = name.slice(i, name.length);
+    result.push(letterRemoved);
+  }
   return result;
 };
 
@@ -30,7 +33,12 @@ const howMuchPencil = (name) => {
 // ------------------------------------------------------------------------------------------------
 
 const wordsToCharList = (input) => {
-  // Solution code here...
+  const anwser = [];
+  for (let j = 0; j <= input.length; j ++) {
+    let nameSplit = input.split(/[a-z]/i);
+    //anwser.push(nameSplit);
+  }
+  return nameSplit;
 };
 
 // ------------------------------------------------------------------------------------------------
