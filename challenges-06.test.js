@@ -56,6 +56,9 @@ const getFrom = (obj, property) => {
     return Object.entries(obj);
   }
   }
+// const getFrom = (obj, property) => {
+//  return Object[property](obj);
+
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 5
@@ -112,7 +115,11 @@ let characters = [
 ]
 
 const totalCharacters = (arr) => {
-  // Solution code here...
+  let characterArray = [];
+  arr.forEach(obj => {
+    characterArray.push(getFrom(obj, 'keys'));
+  });
+  return characterArray.length;
 }
 
 // ------------------------------------------------------------------------------------------------
@@ -123,7 +130,9 @@ const totalCharacters = (arr) => {
 // ------------------------------------------------------------------------------------------------
 
 const getHouses = (arr) => {
-  // Solution code here...
+  arr.forEach(obj => {
+
+  })
 }
 
 // ------------------------------------------------------------------------------------------------
