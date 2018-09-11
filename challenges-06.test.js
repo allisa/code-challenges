@@ -47,17 +47,19 @@ const courseInfo = { name: 'Code 301', duration: { dayTrack: '4 weeks', eveningT
   topics: ['SMACSS', 'APIs', 'NodeJS', 'SQL', 'jQuery', 'functional programming'],
   finalExam: true };
 
-const getFrom = (obj, property) => {
-  if (property === 'keys') {
-    return Object.keys(obj);
-  } else if (property === 'values') {
-    return Object.values(obj);
-  } else {
-    return Object.entries(obj);
-  }
-  }
 // const getFrom = (obj, property) => {
-//  return Object[property](obj);
+//   if (property === 'keys') {
+//     return Object.keys(obj);
+//   } else if (property === 'values') {
+//     return Object.values(obj);
+//   } else {
+//     return Object.entries(obj);
+//   }
+//   }
+
+    const getFrom = (obj, property) => {
+      return Object[property](obj);
+    }
 
 
 // ------------------------------------------------------------------------------------------------
@@ -130,9 +132,11 @@ const totalCharacters = (arr) => {
 // ------------------------------------------------------------------------------------------------
 
 const getHouses = (arr) => {
+  let dataset = [];
   arr.forEach(obj => {
-
-  })
+    dataset.push(getFrom(obj, 'values')[3]);
+  });
+  return dataset;
 }
 
 // ------------------------------------------------------------------------------------------------
