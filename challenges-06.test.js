@@ -147,8 +147,11 @@ const getHouses = (arr) => {
 // ------------------------------------------------------------------------------------------------
 
 const hasChildrenValues = (arr, character) => {
-  // Solution code here...
+//   arr.forEach(obj => {
+//     if (getFrom(obj, 'values')[2] === true)
+//   })
 }
+//hit 2 hour mark and couldn't figure this one out
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 8
