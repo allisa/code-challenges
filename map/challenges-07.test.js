@@ -43,9 +43,7 @@ const forEachTwoToThe = (input) => {
 // instead of a for loop or forEach.
 // ------------------------------------------------------------------------------------------------
 
-const mapTwoToThe = (input) => {
-  // Solution code here...
-}
+const mapTwoToThe = (input) => input.map(num => Math.pow(2,num));
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 4
