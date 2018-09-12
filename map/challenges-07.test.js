@@ -28,7 +28,11 @@ const forLoopTwoToThe = (input) => {
 // ------------------------------------------------------------------------------------------------
 
 const forEachTwoToThe = (input) => {
-  // Solution code here...
+  const answer = [];
+  input.forEach(num => {
+    answer.push(Math.pow(2, num));
+  })
+  return answer;
 };
 
 // ------------------------------------------------------------------------------------------------
