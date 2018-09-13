@@ -86,7 +86,7 @@ const snorlaxData = {
 };
 
 const getBaseStatGreaterThan = (input, minBaseStat) => {
-  // Solution code here...
+  return input.filter(stat => stat.baseStat>minBaseStat);
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -100,7 +100,7 @@ const getBaseStatGreaterThan = (input, minBaseStat) => {
 // ------------------------------------------------------------------------------------------------
 
 const getStatName = (input, minBaseStat) => {
-  // Solution code here...
+  return input.filter(elt => elt.baseStat>minBaseStat).map(x => x.stat.name) 
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -154,7 +154,7 @@ const characters = [
 ];
 
 const getCharactersWithoutChildren = (input) => {
-  // Solution code here...
+  return input.filter(obj => !obj.children);
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -168,7 +168,13 @@ const getCharactersWithoutChildren = (input) => {
 // ------------------------------------------------------------------------------------------------
 
 const evenOddNumericValues = (input) => {
-  // Solution code here...
+  return input.filter(int => Number.isInteger(int)).map(num => {
+    if(num % 2 === 0) {
+      return 'even';
+    } else {
+      return 'odd';
+    };
+  })
 };
 
 // ------------------------------------------------------------------------------------------------
