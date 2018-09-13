@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------------------------
 
 const oddValues = (input) => {
-  // Solution code here...
+  return input.filter((num) => num % 2 === 1);
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -26,7 +26,7 @@ const oddValues = (input) => {
 
 
 const filterStringsWithVowels = (input) => {
-  // Solution code here...
+  return input.filter((word) => word.match(/[aeiou]/));
 };
 
 
