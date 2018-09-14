@@ -145,8 +145,10 @@ const calculateAverage = (input) => input.reduce((prevVal, currentVal) => prevVa
 // ------------------------------------------------------------------------------------------------
 
 const extractChildren = input => {
-  // Solution code here...
-};
+  return input.filter(input => characters.children.includes('a');
+  return input.filter(input =>)
+});
+//hit two hour mark
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 6
