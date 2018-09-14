@@ -128,13 +128,11 @@ const extractStat = (statName, input) => {
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 4
 //
-// Write a function that, given an array of numbers as input, uses ONE call to filter to
+// Write a function that, given an array of numbers as input, uses ONE call to reduce to
 // calculate the array's average value.
 // ------------------------------------------------------------------------------------------------
 
-const calculateAverage = (input) => {
-  // Solution code here...
-};
+const calculateAverage = (input) => input.reduce((prevVal, currentVal) => prevVal + currentVal, 0) / input.length;
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 5
