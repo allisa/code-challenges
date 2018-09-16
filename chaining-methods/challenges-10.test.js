@@ -13,8 +13,12 @@
 // ------------------------------------------------------------------------------------------------
 
 const count = (target, input) => {
-  // Solution code here...
+  return input.map(x => x.filter(num => num === target)).reduce((acc, cv) => {
+    return acc + cv.length;
+  }, 0);
 };
+  
+
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 2
@@ -26,7 +30,10 @@ const count = (target, input) => {
 // ------------------------------------------------------------------------------------------------
 
 const totalSum = (input) => {
-  // Solution code here...
+  return input.reduce((acc, currVal) => {
+    return acc.concat(currVal);}).reduce((acc, currVal) => {
+      return acc + currVal;
+    });
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -43,6 +50,8 @@ const totalSum = (input) => {
 
 const divisibleByFiveTwoToThePower = (input) => {
   // Solution code here...
+
+  //hit 2 hour mark
 };
 
 // ------------------------------------------------------------------------------------------------
