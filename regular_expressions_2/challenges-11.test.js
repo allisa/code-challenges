@@ -47,7 +47,7 @@ const findTagNames = elements => {
 // ------------------------------------------------------------------------------------------------
 
 const validateEmail = (email) => {
-   (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/).test(email);
+   return (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/).test(email);
 };
 
 //stopping at 2 hour mark
