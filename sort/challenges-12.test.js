@@ -8,7 +8,15 @@
 // ------------------------------------------------------------------------------------------------
 
 const sortBackwards = (nums) => {
-  // Solution code here...
+  return nums.sort((a,b) => {
+    if (a > b) {
+      return -1;
+    } else if (a === b) {
+      return 0;
+    } else {
+      return 1;
+    }
+    });
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -22,9 +30,8 @@ const sortBackwards = (nums) => {
 // ------------------------------------------------------------------------------------------------
 
 const alphabetize = (strings) => {
-  // Solution code here...
+  return strings.sort();
 };
-
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 3
 //
@@ -33,7 +40,15 @@ const alphabetize = (strings) => {
 // ------------------------------------------------------------------------------------------------
 
 const sortByLength = (strings) => {
-  // Solution code here...
+  return strings.sort((a,b) => {
+    if (a.length > b.length) {
+      return 1;
+    } else if (a.length === b.length) {
+      return 0;
+    } else {
+      return -1;
+    }
+    });
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -46,7 +61,15 @@ const sortByLength = (strings) => {
 // ------------------------------------------------------------------------------------------------
 
 const alphabetizeBetter = (strs) => {
-  // Solution code here...
+  return strs.sort((a,b) => {
+    if (a.toLowerCase() > b.toLowerCase()) {
+      return 1;
+    } else if (a.toLowerCase() === b.toLowerCase()) {
+      return 0;
+    } else {
+      return -1;
+    }
+    });
 };
 
 // ------------------------------------------------------------------------------------------------
