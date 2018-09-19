@@ -201,9 +201,11 @@ const meetings = [
 
 const sortMeetingsByDay = (meetings) => {
   return meetings.sort((a,b) => {
-    
-  })
+    //return Date(a.dayOfWeek) - Date(b.dayOfWeek);
+
+  });
 };
+//hit 2 hour mark
 
 // ------------------------------------------------------------------------------------------------
 // CHALLENGE 10
