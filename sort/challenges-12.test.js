@@ -108,7 +108,15 @@ const sortByPrice = (objs) => {
 // ------------------------------------------------------------------------------------------------
 
 const sortNumbersByLength = (nums) => {
-  // Solution code here...
+  return nums.sort((a,b) => {
+    if (a.toString().length > b.toString().length) {
+      return 1;
+    } else if (a.toString().length === b.toString().length) {
+      return 0;
+    } else {
+      return -1;
+    }
+  });
 };
 
 // -----------------------------------------------------------------------------------------------
