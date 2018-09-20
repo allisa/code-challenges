@@ -11,7 +11,7 @@
 // ------------------------------------------------------------------------------------------------
 
 const firstLetters = (strs) => {
-  // Solution code here...
+  return strs.map(string => string.charAt(0));
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -23,7 +23,7 @@ const firstLetters = (strs) => {
 // ------------------------------------------------------------------------------------------------
 
 const findHappiness = (strs) => {
-  // Solution code here...
+  return strs.filter(string => string.includes(':'));
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -34,7 +34,9 @@ const findHappiness = (strs) => {
 // ------------------------------------------------------------------------------------------------
 
 const standardizePhoneNumbers = (phoneNumbers) => {
-  // Solution code here...
+  return phoneNumbers.map(nums => {
+    return nums.substring(1,4) + nums.substring(6,9) + nums.substring(10, nums.length);
+  });
 };
 
 // ------------------------------------------------------------------------------------------------
@@ -45,7 +47,11 @@ const standardizePhoneNumbers = (phoneNumbers) => {
 // ------------------------------------------------------------------------------------------------
 
 const onlyOddChars = (str) => {
-  // Solution code here...
+  let ans = '';
+  for (let i = 1; i < str.length; i +=2) {
+    ans += str[i];
+  }
+  return ans;
 };
 
 // ------------------------------------------------------------------------------------------------
