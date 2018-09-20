@@ -73,7 +73,7 @@ const allHappy = (strs) => {
 // ------------------------------------------------------------------------------------------------
 
 const findAnything = (strs, target) => {
-  // Solution code here...
+  return strs.filter(strings => strings.includes(target));
 };
 
 // ------------------------------------------------------------------------------------------------
